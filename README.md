@@ -1,7 +1,7 @@
 # nhlcoding-ai-server
 AI server for AI tasks: Validation problem submission, program clustering
 
-# Usage:
+# Basic usage:
 
 1. Install necessary packages:
 ```shell
@@ -20,3 +20,20 @@ python main.py
         }
     ```
     - Response:  `"Valid" / "Invalid"`
+
+# Change processing model
+
+## Validation endpoint
+
+Change these path (in `main.py`) to your prefer encoder and classifier
+```python
+encoder = pickle.load(open('./pre-trained-encoders/tf_vectorize', 'rb'))
+validate_model = pickle.load(open('./pre-trained-models/svm_tf', 'rb'))
+```
+
+This repo currently supports 2 type:
+- `tf_vectorize` encoder along with `svm_tf` or `naive_bayes_tf` classifier.
+- `tfidf_vectorize` encoder along with `svm_tfidf` or `naive_bayes_tfidf` classifier.
+
+## Program clustering endpoint (`In progress`)
+

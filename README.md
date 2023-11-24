@@ -19,7 +19,12 @@ python main.py
             "description": "problem description" 
         }
     ```
-    - Response:  `"Valid" / "Invalid"`
+    - Response:
+    ```json
+        {
+            "isValid": Boolean 
+        }
+    ```
 
 # Change processing model
 

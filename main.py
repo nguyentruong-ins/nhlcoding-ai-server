@@ -10,8 +10,8 @@ CORS(app)
 parser = reqparse.RequestParser()
 parser.add_argument("description")
 
-encoder = pickle.load(open('./pre-trained-encoders/tf_idf_vectorize', 'rb'))
-validate_model = pickle.load(open('./pre-trained-models/svm_tfidf', 'rb'))
+encoder = pickle.load(open('./pre-trained-encoders/tf_vectorize', 'rb'))
+validate_model = pickle.load(open('./pre-trained-models/svm_tf', 'rb'))
 
 class ValidationEndPoint(Resource):
     def get(self):

@@ -5,7 +5,7 @@ AI server for AI tasks: Validation problem submission, program clustering
 
 1. Activate the venv
 ```bash
-source venv/bin/activate
+source .env/bin/activate
 ```
 2. Install necessary packages:
 ```shell

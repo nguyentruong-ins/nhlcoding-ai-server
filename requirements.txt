@@ -1,4 +1,6 @@
-flask
+flask==3.0.0
 flask-cors
 flask_restful
 scikit-learn
+Werkzeug==3.0.1
+watchdog==3.0.0
